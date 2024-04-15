@@ -1,0 +1,43 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/email_service
+    username: root
+    password: petitphat1
+  jpa:
+    hibernate:
+    ddl-auto: update
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+  sql:
+    init:
+      mode: never
+      continue-on-error: false
+  mail: smtp.gmail.com
+  port: 587
+  username: marckenlygbeau@gmail.com
+  password: cxmjrheikeieobqv
+  default-encoding: UTF-8
+
+  properties:
+    mail:
+      mime:
+        charset: UTF
+      smtp:
+        writetimeout: 10000
+        connecttimeout: 10000
+        timeout: 10000
+        auth: true
+        starttls:
+          enable: true
+          required: true
+      verify:
+        host: http://localhost:8080
+
+#email config
+#EMAIL_HOST: smtp.gmail.com
+#EMAIL_PORT: 587
+#EMAIL_ID: marckenlygbeau@gmail.com
+#EMAIL_PASSWORD: cxmjrheikeieobqv
+#VERIFY_EMAIL_HOST: http://localhost:8080
